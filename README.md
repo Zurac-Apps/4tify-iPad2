@@ -10,7 +10,7 @@ You can once again enjoy the greatest iOS on your iPad 2. By @zzanehip.
 * ***This is still very much an early phase project, use this at your own risk. Before continuing, please read the "What's Supported" and "Current Issues" sections.***
 
 ## What's Supported
-There is still further testing to be done on this issue, but as of right now it appears your iPad must have at one point ran iOS 4.3.x. 
+There is still further testing to be done on this issue, but as of right now it appears your iPad must have at one point ran iOS 4.3.x. Not compeletly sure though, so if your iPad was built past September 2011, go ahead and give it a try, and report back.
 
 * iPad 2 Wifi (2,1)
 	* iOS 4.3.4
@@ -74,7 +74,7 @@ Now, we'll partition our device, install iOS 4, and patch it. Once this is done,
 
 `./Reinstall-App.sh <ip-address>`
 
-****As of right now, modifying your iOS 4 password is dangerous, and will likely result in a recover loop. Until this is fixed, do not set it!***
+****As of right now, modifying your iOS 4 password is dangerous, and will likely result in a recovery loop. Until this is fixed, do not set it!***
 
 ## Current Issues
 * ***4.3.3 and Below NAND WMR/FTL Error*** 
