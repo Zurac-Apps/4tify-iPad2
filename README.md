@@ -14,9 +14,9 @@ There is still further testing to be done on this issue, but as of right now it 
 
 * iPad 2 Wifi (2,1)
 	* iOS 4.3.4
-		* Partially working (see Current Issues)
+		* Fully working
 	* iOS 4.3.5
-		* Partially working (see Current Issues)
+		* Fully working
 * iPad 2 GSM (2,2)
  	* iOS 4.3.4
 		* Fully working
@@ -82,9 +82,8 @@ Now, we'll partition our device, install iOS 4, and patch it. Once this is done,
 	* Update 5/8/20: I was able to modify an iBoot image to patch out this issue. There's some resulting communication issues with the kernel and boot, but we might be looking at gettigns this working soon.
 
 ## Changelog
-* ***4.3.3 and Below NAND WMR/FTL Error*** 
- 	* 1.1 — New boot method fixes black screen issue. 
-	* 1.0 — Release. 
+* 1.1 — New boot method fixes black screen issue. 
+* 1.0 — Release. 
 
 
 ## Thanks to:
