@@ -1,4 +1,4 @@
-# 4tify-iPad2 v1.1
+# 4tify-iPad2 v1.2
 You can once again enjoy the greatest iOS on your iPad 2. By @zzanehip.
 
 ## What and Why?
@@ -82,6 +82,7 @@ Now, we'll partition our device, install iOS 4, and patch it. Once this is done,
 	* Update 5/8/20: I was able to modify an iBoot image to patch out this issue. There's some resulting communication issues with the kernel and boot, but we might be looking at gettigns this working soon.
 
 ## Changelog
+* 1.2 — Stability improvements and GSM/CDMA revisions. 
 * 1.1 — New boot method fixes black screen issue. 
 * 1.0 — Release. 
 
