@@ -82,9 +82,8 @@ Now, we'll partition our device, install iOS 4, and patch it. Once this is done,
 	* Update 5/8/20: I was able to modify an iBoot image to patch out this issue. There's some resulting communication issues with the kernel and boot, but we might be looking at gettigns this working soon.
 
 ## Changelog
-* ***4.3.3 and Below NAND WMR/FTL Error*** 
- 	* 1.1 — New boot method fixes black screen issue. 
-	* 1.0 — Release. 
+* 1.1 — New boot method fixes black screen issue. 
+* 1.0 — Release. 
 
 
 ## Thanks to:
