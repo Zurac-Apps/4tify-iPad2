@@ -14,9 +14,9 @@ There is still further testing to be done on this issue, but as of right now it 
 
 * iPad 2 Wifi (2,1)
 	* iOS 4.3.4
-		* Partially working (see Current Issues)
+		* Fully working
 	* iOS 4.3.5
-		* Partially working (see Current Issues)
+		* Fully working
 * iPad 2 GSM (2,2)
  	* iOS 4.3.4
 		* Fully working
