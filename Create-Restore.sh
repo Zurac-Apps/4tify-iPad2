@@ -89,7 +89,7 @@ then
         echo "Fetching Blobs..."
         ./idevicerestore -t custom.ipsw
         ./xpwntool `unzip -j custom.ipsw 'Firmware/dfu/iBSS*' | awk '/inflating/{print $2}'` pwnediBSS
-        cd ../support_files/6.1.3/Restore-2,1/B/
+        cd ../support_files/6.1.3/Restore-2,1/4.3.3/
         echo "Patching IPSW..."
         zip -d -qq ../../../../support_restore/custom.ipsw "Downgrade/DeviceTree.k93ap.img3"
         zip -d -qq ../../../../support_restore/custom.ipsw "Firmware/all_flash/all_flash.k93ap.production/manifest"
