@@ -1,4 +1,4 @@
-# 4tify-iPad2 v1.0
+# 4tify-iPad2 v1.1
 You can once again enjoy the greatest iOS on your iPad 2. By @zzanehip.
 
 ## What and Why?
@@ -42,9 +42,9 @@ There is still further testing to be done on this issue, but as of right now it 
 ##  1. Restore and Jailbreak:
 We need to get our iPad onto a modified version of iOS 6.1.3 with lwvm patched out and replaced with GPT.
 
-1. First, build patched IPSW and grab blobs (of course, omit < > when entering). For model enter either 2,1 2,2 or 2,3. For option enter A. Option B is also included but will install iOS 4.3.3 (see Current Issues):
+1. First, build patched IPSW and grab blobs (of course, omit < > when entering). For model enter either 2,1 2,2 or 2,3. For Version enter either 4.3.4, 4.3.5, or 4.3.3 (see Current Issues):
 
-`./Create-Restore.sh <Model> <Option> `
+`./Create-Restore.sh <Model> <Version> `
 
 2. Restore to IPSW (Enter root password, alpine, when asked. If the restore process doesn't start after e.g. fish: storing file 73728 (73728) just click your home button:		
 
@@ -78,10 +78,13 @@ Now, we'll partition our device, install iOS 4, and patch it. Once this is done,
 
 ## Current Issues
 * ***4.3.3 and Below NAND WMR/FTL Error*** 
-	* You'll notice that 4.3.3 is bundled with the project, this is to allow various other developers to take a shot at resolving this issue. I've been working with axi0mX for a few days on this so far no luck. Essentially, there's some WMR/FTL driver that apple modified between 4.3.3 and 4.3.4 that will result in an error when trying to boot into ios 4.3.3 and below. If you would like to take a shot at gettting this to work, you can view the error in iRecovery after you try to boot iOS 4.3.3. If you want to help work on this shoot me a dm. 
-* ***iPad Wifi (2,1) Black Screen Issue***
-	* I've deemed iPad 2,1 partially working for this reason. On some iPad 2,1s the device will boot iOS 4 no problem, but the screen will stay black with the backlight on. The device is fully responsive, you can unlock it, it plays sounds, yet the screen is black! Not sure the cause of this as of right now, and why it only plagues some iPad 2,1 models and not others.    
- 
+	* Init: You'll notice that 4.3.3 is bundled with the project, this is to allow various other developers to take a shot at resolving this issue. I've been working with axi0mX for a few days on this so far no luck. Essentially, there's some WMR/FTL driver that apple modified between 4.3.3 and 4.3.4 that will result in an error when trying to boot into ios 4.3.3 and below. If you would like to take a shot at gettting this to work, you can view the error in iRecovery after you try to boot iOS 4.3.3. If you want to help work on this shoot me a dm.
+	* Update 5/8/20: I was able to modify an iBoot image to patch out this issue. There's some resulting communication issues with the kernel and boot, but we might be looking at gettigns this working soon.
+
+## Changelog
+* ***4.3.3 and Below NAND WMR/FTL Error*** 
+ 	* 1.1 — New boot method fixes black screen issue. 
+	* 1.0 — Release. 
 
 
 ## Thanks to:

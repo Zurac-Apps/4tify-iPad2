@@ -746,42 +746,18 @@ then
         send "exit\r"
         expect eof
         )
-        echo "Patching Boot Files (1/5)"
+        echo "Patching Boot Files (1/2)"
         /usr/bin/expect <(cat << EOF
         set timeout -1
-        spawn scp -P 22 -o StrictHostKeyChecking=no applelogo root@$IP:/
+        spawn scp -P 22 -o StrictHostKeyChecking=no LLBB.k93ap.RELEASE.bin root@$IP:/
         expect "root@$IP's password:"
         send "alpine\r"
         expect eof
         )
-        echo "Patching Boot Files (2/5)"
+        echo "Patching Boot Files (2/2)"
         /usr/bin/expect <(cat << EOF
         set timeout -1
-        spawn scp -P 22 -o StrictHostKeyChecking=no devicetree root@$IP:/
-        expect "root@$IP's password:"
-        send "alpine\r"
-        expect eof
-        )
-        echo "Patching Boot Files (3/5)"
-        /usr/bin/expect <(cat << EOF
-        set timeout -1
-        spawn scp -P 22 -o StrictHostKeyChecking=no kernelcache root@$IP:/
-        expect "root@$IP's password:"
-        send "alpine\r"
-        expect eof
-        )
-        echo "Patching Boot Files (4/5)"
-        /usr/bin/expect <(cat << EOF
-        set timeout -1
-        spawn scp -P 22 -o StrictHostKeyChecking=no ramdisk root@$IP:/
-        expect "root@$IP's password:"
-        send "alpine\r"
-        expect eof
-        )
-        echo "Patching Boot Files (5/5)"
-        /usr/bin/expect <(cat << EOF
-        set timeout -1
-        spawn scp -P 22 -o StrictHostKeyChecking=no LLB root@$IP:/
+        spawn scp -P 22 -o StrictHostKeyChecking=no kernelcachb root@$IP:/System/Library/Caches/com.apple.kernelcaches
         expect "root@$IP's password:"
         send "alpine\r"
         expect eof
@@ -958,42 +934,18 @@ then
         send "exit\r"
         expect eof
         )
-        echo "Patching Boot Files (1/5)"
+        echo "Patching Boot Files (1/2)"
         /usr/bin/expect <(cat << EOF
         set timeout -1
-        spawn scp -P 22 -o StrictHostKeyChecking=no applelogo root@$IP:/
+        spawn scp -P 22 -o StrictHostKeyChecking=no LLBB.k93ap.RELEASE.bin root@$IP:/
         expect "root@$IP's password:"
         send "alpine\r"
         expect eof
         )
-        echo "Patching Boot Files (2/5)"
+        echo "Patching Boot Files (2/2)"
         /usr/bin/expect <(cat << EOF
         set timeout -1
-        spawn scp -P 22 -o StrictHostKeyChecking=no devicetree root@$IP:/
-        expect "root@$IP's password:"
-        send "alpine\r"
-        expect eof
-        )
-        echo "Patching Boot Files (3/5)"
-        /usr/bin/expect <(cat << EOF
-        set timeout -1
-        spawn scp -P 22 -o StrictHostKeyChecking=no kernelcache root@$IP:/
-        expect "root@$IP's password:"
-        send "alpine\r"
-        expect eof
-        )
-        echo "Patching Boot Files (4/5)"
-        /usr/bin/expect <(cat << EOF
-        set timeout -1
-        spawn scp -P 22 -o StrictHostKeyChecking=no ramdisk root@$IP:/
-        expect "root@$IP's password:"
-        send "alpine\r"
-        expect eof
-        )
-        echo "Patching Boot Files (5/5)"
-        /usr/bin/expect <(cat << EOF
-        set timeout -1
-        spawn scp -P 22 -o StrictHostKeyChecking=no LLB root@$IP:/
+        spawn scp -P 22 -o StrictHostKeyChecking=no kernelcachb root@$IP:/System/Library/Caches/com.apple.kernelcaches
         expect "root@$IP's password:"
         send "alpine\r"
         expect eof
@@ -1170,42 +1122,18 @@ then
         send "exit\r"
         expect eof
         )
-        echo "Patching Boot Files (1/5)"
+        echo "Patching Boot Files (1/2)"
         /usr/bin/expect <(cat << EOF
         set timeout -1
-        spawn scp -P 22 -o StrictHostKeyChecking=no applelogo root@$IP:/
+        spawn scp -P 22 -o StrictHostKeyChecking=no LLBB.k93ap.RELEASE.bin root@$IP:/
         expect "root@$IP's password:"
         send "alpine\r"
         expect eof
         )
-        echo "Patching Boot Files (2/5)"
+        echo "Patching Boot Files (2/2)"
         /usr/bin/expect <(cat << EOF
         set timeout -1
-        spawn scp -P 22 -o StrictHostKeyChecking=no devicetree root@$IP:/
-        expect "root@$IP's password:"
-        send "alpine\r"
-        expect eof
-        )
-        echo "Patching Boot Files (3/5)"
-        /usr/bin/expect <(cat << EOF
-        set timeout -1
-        spawn scp -P 22 -o StrictHostKeyChecking=no kernelcache root@$IP:/
-        expect "root@$IP's password:"
-        send "alpine\r"
-        expect eof
-        )
-        echo "Patching Boot Files (4/5)"
-        /usr/bin/expect <(cat << EOF
-        set timeout -1
-        spawn scp -P 22 -o StrictHostKeyChecking=no ramdisk root@$IP:/
-        expect "root@$IP's password:"
-        send "alpine\r"
-        expect eof
-        )
-        echo "Patching Boot Files (5/5)"
-        /usr/bin/expect <(cat << EOF
-        set timeout -1
-        spawn scp -P 22 -o StrictHostKeyChecking=no LLB root@$IP:/
+        spawn scp -P 22 -o StrictHostKeyChecking=no kernelcachb root@$IP:/System/Library/Caches/com.apple.kernelcaches
         expect "root@$IP's password:"
         send "alpine\r"
         expect eof
@@ -1387,50 +1315,18 @@ then
         send "exit\r"
         expect eof
         )
-        echo "Patching Boot Files (1/5)"
+        echo "Patching Boot Files (1/2)"
         /usr/bin/expect <(cat << EOF
         set timeout -1
-        spawn scp -P 22 -o StrictHostKeyChecking=no applelogo root@$IP:/
+        spawn scp -P 22 -o StrictHostKeyChecking=no LLBB.k95ap.RELEASE.bin root@$IP:/
         expect "root@$IP's password:"
         send "alpine\r"
         expect eof
         )
-        echo "Patching Boot Files (2/5)"
+        echo "Patching Boot Files (2/2)"
         /usr/bin/expect <(cat << EOF
         set timeout -1
-        spawn scp -P 22 -o StrictHostKeyChecking=no devicetree root@$IP:/
-        expect "root@$IP's password:"
-        send "alpine\r"
-        expect eof
-        )
-        echo "Patching Boot Files (3/5)"
-        /usr/bin/expect <(cat << EOF
-        set timeout -1
-        spawn scp -P 22 -o StrictHostKeyChecking=no kernelcache root@$IP:/
-        expect "root@$IP's password:"
-        send "alpine\r"
-        expect eof
-        )
-        echo "Patching Boot Files (4/5)"
-        /usr/bin/expect <(cat << EOF
-        set timeout -1
-        spawn scp -P 22 -o StrictHostKeyChecking=no ramdisk root@$IP:/
-        expect "root@$IP's password:"
-        send "alpine\r"
-        expect eof
-        )
-        echo "Patching Boot Files (5/5)"
-        /usr/bin/expect <(cat << EOF
-        set timeout -1
-        spawn scp -P 22 -o StrictHostKeyChecking=no LLB root@$IP:/
-        expect "root@$IP's password:"
-        send "alpine\r"
-        expect eof
-        )
-        echo "Sending runasroot "
-        /usr/bin/expect <(cat << EOF
-        set timeout -1
-        spawn scp -P 22 -o StrictHostKeyChecking=no runasroot root@$IP:/usr/bin
+        spawn scp -P 22 -o StrictHostKeyChecking=no kernelcachb root@$IP:/System/Library/Caches/com.apple.kernelcaches
         expect "root@$IP's password:"
         send "alpine\r"
         expect eof
@@ -1599,42 +1495,18 @@ then
         send "exit\r"
         expect eof
         )
-        echo "Patching Boot Files (1/5)"
+        echo "Patching Boot Files (1/2)"
         /usr/bin/expect <(cat << EOF
         set timeout -1
-        spawn scp -P 22 -o StrictHostKeyChecking=no applelogo root@$IP:/
+        spawn scp -P 22 -o StrictHostKeyChecking=no LLBB.k95ap.RELEASE.bin root@$IP:/
         expect "root@$IP's password:"
         send "alpine\r"
         expect eof
         )
-        echo "Patching Boot Files (2/5)"
+        echo "Patching Boot Files (2/2)"
         /usr/bin/expect <(cat << EOF
         set timeout -1
-        spawn scp -P 22 -o StrictHostKeyChecking=no devicetree root@$IP:/
-        expect "root@$IP's password:"
-        send "alpine\r"
-        expect eof
-        )
-        echo "Patching Boot Files (3/5)"
-        /usr/bin/expect <(cat << EOF
-        set timeout -1
-        spawn scp -P 22 -o StrictHostKeyChecking=no kernelcache root@$IP:/
-        expect "root@$IP's password:"
-        send "alpine\r"
-        expect eof
-        )
-        echo "Patching Boot Files (4/5)"
-        /usr/bin/expect <(cat << EOF
-        set timeout -1
-        spawn scp -P 22 -o StrictHostKeyChecking=no ramdisk root@$IP:/
-        expect "root@$IP's password:"
-        send "alpine\r"
-        expect eof
-        )
-        echo "Patching Boot Files (5/5)"
-        /usr/bin/expect <(cat << EOF
-        set timeout -1
-        spawn scp -P 22 -o StrictHostKeyChecking=no LLB root@$IP:/
+        spawn scp -P 22 -o StrictHostKeyChecking=no kernelcachb root@$IP:/System/Library/Caches/com.apple.kernelcaches
         expect "root@$IP's password:"
         send "alpine\r"
         expect eof
