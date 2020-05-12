@@ -64,7 +64,7 @@ Now, we'll partition our device, install iOS 4, and patch it. Once this is done,
 
 `./Partition.sh <Model> <IP-Address>`
 
-2. Lastly, we'll initalize our partition, build our filesystem, restore it, and patch it. For Version enter either 4.3.4 or 4.3.5 if you chose option A, or 4.3.3 if you chose option B. This step generally takes time, so just sit back and relax:	
+2. Lastly, we'll initalize our partition, build our filesystem, restore it, and patch it. For Version enter either 4.3.4 or 4.3.5. This step generally takes time, so just sit back and relax:	
 
 `./iOS4.sh <Model> <Version> <IP-Address>`
 
@@ -80,6 +80,7 @@ Now, we'll partition our device, install iOS 4, and patch it. Once this is done,
 * ***4.3.3 and Below NAND WMR/FTL Error*** 
 	* Init: You'll notice that 4.3.3 is bundled with the project, this is to allow various other developers to take a shot at resolving this issue. I've been working with axi0mX for a few days on this so far no luck. Essentially, there's some WMR/FTL driver that apple modified between 4.3.3 and 4.3.4 that will result in an error when trying to boot into ios 4.3.3 and below. If you would like to take a shot at gettting this to work, you can view the error in iRecovery after you try to boot iOS 4.3.3. If you want to help work on this shoot me a dm.
 	* Update 5/8/20: I was able to modify an iBoot image to patch out this issue. There's some resulting communication issues with the kernel and boot, but we might be looking at gettigns this working soon.
+	* Update 5/11/20: Seems like we can get this to go if we patch _PE_Epoch_update thing in the kernel. More testing needs to be done, but we can theoretically write a script in iBoot to patch this for us. 
 
 ## Changelog
 * 1.2 — Stability improvements and GSM/CDMA revisions. 
