@@ -21,7 +21,7 @@ There is still further testing to be done on this issue, but as of right now it 
 * iPad 2 CDMA (2,3)
  	* iOS 4.3 - 4.3.5
 		* Fully working
-* Tested on Mac OS 10.13-10.15
+* Tested on Mac OS 10.9-10.15
 
 
 #  Instructions:
