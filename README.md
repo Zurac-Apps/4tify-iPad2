@@ -44,6 +44,7 @@ We need to get our iPad onto a modified version of iOS 6.1.3 with lwvm patched o
 `./Restore <Model> <IP-Address>`
 
 3. Set up your device.
+
 4. A Jailbreak is prebuilt into the IPSW, but you wont see the Cydia app. To fix this run:
 
 `./Cydia-Fix <IP-Address>`	
