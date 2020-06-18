@@ -1,4 +1,4 @@
-# 4tify-iPad2 v1.3
+# 4tify-iPad2 v1.3.1
 You can once again enjoy the greatest iOS on your iPad 2. By @zzanehip.
 
 ## What and Why?
@@ -74,6 +74,7 @@ Now, we'll partition our device, install iOS 4, and patch it. Once this is done,
 	* On some iPad 2,2 and 2,3s there seems to be an baseband issue that prevents the device from activating. Not sure what the root cause of it is yet, but it shoudn't take too long to figure it out. 
 
 ## Changelog
+	* 1.3.1 - Resolves compiler issue.
 	* 1.3 - Major update. 
 		* Supports all versions of iOS 4.3 and Jailbreaking. 
 		* All scripts rebuilt in C with stability and speed in mind.
