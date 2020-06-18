@@ -37,7 +37,7 @@ We need to get our iPad onto a modified version of iOS 6.1.3 with lwvm patched o
 
 1. First, build patched IPSW and grab blobs (of course, omit < > when entering). For model enter either 2,1 2,2 or 2,3. For Version enter either 4.3.4, 4.3.5, or 4.3.3 (see Current Issues):
 
-`./Create-Restore <Model> <Version> `
+`./Create-Restore <Model>`
 
 2. Restore to IPSW (Enter root password, alpine, when asked. If the restore process doesn't start after e.g. fish: storing file 73728 (73728) just click your home button:		
 
