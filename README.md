@@ -1,4 +1,4 @@
-# 4tify-iPad2 v1.2
+# 4tify-iPad2 v1.3
 You can once again enjoy the greatest iOS on your iPad 2. By @zzanehip.
 
 ## What and Why?
@@ -13,20 +13,14 @@ You can once again enjoy the greatest iOS on your iPad 2. By @zzanehip.
 There is still further testing to be done on this issue, but as of right now it appears your iPad must have at one point ran iOS 4.3.x. Not compeletly sure though, so if your iPad was built past September 2011, go ahead and give it a try, and report back.
 
 * iPad 2 Wifi (2,1)
-	* iOS 4.3.4
-		* Fully working
-	* iOS 4.3.5
-		* Fully working
+	* iOS 4.3 - 4.3.5
+		* Fully working	 
 * iPad 2 GSM (2,2)
- 	* iOS 4.3.4
-		* Fully working
-	* iOS 4.3.5
+ 	* iOS 4.3 - 4.3.5
 		* Fully working
 * iPad 2 CDMA (2,3)
- 	* iOS 4.3.4
+ 	* iOS 4.3 - 4.3.5
 		* Fully working
-	* iOS 4.3.5
-		* Fully working 
 * Tested on Mac OS 10.13-10.15
 
 
@@ -36,7 +30,6 @@ There is still further testing to be done on this issue, but as of right now it 
 - While conducting the process, keep your iPad plugged into your computer (obviously).
 - Keep your root password as alpine throughout the process. 
 - As always, if one of the scripts refuses to run (permission denied) just run chmod +x on it.
-- Keep trying things, don't be dismayed. I recommend you start with iOS 4.3.5, and if that doesn't work, odds are your iPad isn't compatible.
 - Don't come yelling at me if your iPad 2 is not compatible. Be smart, check sndeep.info if you're not certain. 
 
 ##  1. Restore and Jailbreak:
@@ -44,16 +37,16 @@ We need to get our iPad onto a modified version of iOS 6.1.3 with lwvm patched o
 
 1. First, build patched IPSW and grab blobs (of course, omit < > when entering). For model enter either 2,1 2,2 or 2,3. For Version enter either 4.3.4, 4.3.5, or 4.3.3 (see Current Issues):
 
-`./Create-Restore.sh <Model> <Version> `
+`./Create-Restore <Model> <Version> `
 
 2. Restore to IPSW (Enter root password, alpine, when asked. If the restore process doesn't start after e.g. fish: storing file 73728 (73728) just click your home button:		
 
-`./Restore.sh <IP-Address>`
+`./Restore <Model> <IP-Address>`
 
 3. Set up your device.
 4. A Jailbreak is prebuilt into the IPSW, but you wont see the Cydia app. To fix this run:
 
-`./Cydia-Fix.sh <IP-Address>`	
+`./Cydia-Fix <IP-Address>`	
 
 5. Done, you should see Cydia on your Springboard, open it, and let it do it's thing. Once it's done, reboot your device (Cydia wont open if you don't). Open Cydia, upgrade essential. Do not do complete upgrade!
 
@@ -62,30 +55,35 @@ Now, we'll partition our device, install iOS 4, and patch it. Once this is done,
 
 1. First, we'll install necesary files, partition the device, and patch it. (It will ask for your root password a few times, as always, enter alpine. Again, If the  process doesn't continue after e.g. fish: storing file 73728 (73728) just click your home button):
 
-`./Partition.sh <Model> <IP-Address>`
+`./Partition <Model> <IP-Address>`
 
-2. Lastly, we'll initalize our partition, build our filesystem, restore it, and patch it. For Version enter either 4.3.4 or 4.3.5. This step generally takes time, so just sit back and relax:	
+2. Lastly, we'll initalize our partition, build our filesystem, restore it, and patch it. Note, if you are using an iPad 2,1 use iOS4_Old.sh for nows:	
 
-`./iOS4.sh <Model> <Version> <IP-Address>`
+`./iOS4 <IP-Address>`
 
 3. That's it, your done, and your device will reboot. To boot into iOS 4, lauch the 4tify app. Once your screen goes black wait a sec, then tap your homebutton, and should see your device start to verbose boot within 10-15 seconds.
 
 4. If you delete the 4tify app, or it doesn't seem to be working, you can always run:
 
-`./Reinstall-App.sh <ip-address>`
+`./Reinstall-App <IP-Address>`
 
 ****As of right now, modifying your iOS 4 password is dangerous, and will likely result in a recovery loop. Until this is fixed, do not set it!***
 
 ## Current Issues
-* ***4.3.3 and Below NAND WMR/FTL Error*** 
-	* Init: You'll notice that 4.3.3 is bundled with the project, this is to allow various other developers to take a shot at resolving this issue. I've been working with axi0mX for a few days on this so far no luck. Essentially, there's some WMR/FTL driver that apple modified between 4.3.3 and 4.3.4 that will result in an error when trying to boot into ios 4.3.3 and below. If you would like to take a shot at gettting this to work, you can view the error in iRecovery after you try to boot iOS 4.3.3. If you want to help work on this shoot me a dm.
-	* Update 5/8/20: I was able to modify an iBoot image to patch out this issue. There's some resulting communication issues with the kernel and boot, but we might be looking at gettigns this working soon.
-	* Update 5/11/20: Seems like we can get this to go if we patch _PE_Epoch_update thing in the kernel. More testing needs to be done, but we can theoretically write a script in iBoot to patch this for us. 
+* ***iPad 2,2 and 2,3 Baseband Acitvation***
+	* On some iPad 2,2 and 2,3s there seems to be an baseband issue that prevents the device from activating. Not sure what the root cause of it is yet, but it shoudn't take too long to figure it out. 
 
 ## Changelog
-* 1.2 — Stability improvements and GSM/CDMA revisions. 
-* 1.1 — New boot method fixes black screen issue. 
-* 1.0 — Release. 
+	* 1.3 - Major update. 
+		* Supports all versions of iOS 4.3 and Jailbreaking. 
+		* All scripts rebuilt in C with stability and speed in mind.
+		* Rebuilt various parts of the restore process (custom loader, idevicerestore, restore components, and framebuffer)
+		* Resolved major iOS 4 boot issues plaguing all devices.
+		* Added write-up for how to resolve NAND WMR/FTL Error.
+		* Other neat features, bug fixes, and performance updates.
+	* 1.2 — Stability improvements and GSM/CDMA revisions. 
+	* 1.1 — New boot method fixes black screen issue. 
+	* 1.0B — Release. 
 
 
 ## Thanks to:
@@ -99,5 +97,6 @@ Now, we'll partition our device, install iOS 4, and patch it. Once this is done,
 * @msft_guy for ssh ramdisk.
 * @Billy-Ellis for runasroot.
 * @Exploite-d for ssh_ramdisk exec.
+* @synackuk for framebuffer info.
 * @Tommymossss for entertaining me while I made this.
  
