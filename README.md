@@ -41,7 +41,7 @@ We need to get our iPad onto a modified version of iOS 6.1.3 with lwvm patched o
 
 2. Restore to IPSW (Enter root password, alpine, when asked):		
 
-`./Restore <IP-Address>`
+`./Restore <Model> <IP-Address>`
 
 3. Set up your device.
 
