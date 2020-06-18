@@ -35,11 +35,11 @@ There is still further testing to be done on this issue, but as of right now it 
 ##  1. Restore and Jailbreak:
 We need to get our iPad onto a modified version of iOS 6.1.3 with lwvm patched out and replaced with GPT.
 
-1. First, build patched IPSW and grab blobs (of course, omit < > when entering). For model enter either 2,1 2,2 or 2,3. For Version enter either 4.3.4, 4.3.5, or 4.3.3 (see Current Issues):
+1. First, build patched IPSW and grab blobs (of course, omit < > when entering). For model enter either 2,1 2,2 or 2,3:
 
 `./Create-Restore <Model>`
 
-2. Restore to IPSW (Enter root password, alpine, when asked. If the restore process doesn't start after e.g. fish: storing file 73728 (73728) just click your home button:		
+2. Restore to IPSW (Enter root password, alpine, when asked):		
 
 `./Restore <Model> <IP-Address>`
 
@@ -48,7 +48,7 @@ We need to get our iPad onto a modified version of iOS 6.1.3 with lwvm patched o
 
 `./Cydia-Fix <IP-Address>`	
 
-5. Done, you should see Cydia on your Springboard, open it, and let it do it's thing. Once it's done, reboot your device (Cydia wont open if you don't). Open Cydia, upgrade essential. Do not do complete upgrade!
+5. Done, you should see Cydia on your Springboard, open it, and let it do it's thing. Once it's done, reboot your device (Cydia wont open if you don't). Open Cydia, upgrade essential. Do not do complete upgrade, ever!
 
 ##  2. iOS 4 and the Second Partition:
 Now, we'll partition our device, install iOS 4, and patch it. Once this is done, you'll be good to go!
@@ -57,7 +57,7 @@ Now, we'll partition our device, install iOS 4, and patch it. Once this is done,
 
 `./Partition <Model> <IP-Address>`
 
-2. Lastly, we'll initalize our partition, build our filesystem, restore it, and patch it. Note, if you are using an iPad 2,1 use iOS4_Old.sh for nows:	
+2. Lastly, we'll initalize our partition, build our filesystem, restore it, and patch it:	
 
 `./iOS4 <IP-Address>`
 
