@@ -1,4 +1,4 @@
-# 4tify-iPad2 v1.3.1
+# 4tify-iPad2 v1.3.3
 You can once again enjoy the greatest iOS on your iPad 2. By @zzanehip.
 
 ## What and Why?
@@ -31,6 +31,7 @@ There is still further testing to be done on this issue, but as of right now it 
 - Keep your root password as alpine throughout the process. 
 - As always, if one of the scripts refuses to run (permission denied) just run chmod +x on it.
 - Don't come yelling at me if your iPad 2 is not compatible. Be smart, check sndeep.info if you're not certain. 
+- Important Note: If you are upgrading from any version before 1.3 you must repeat *the entire process.* 
 
 ##  1. Restore and Jailbreak:
 We need to get our iPad onto a modified version of iOS 6.1.3 with lwvm patched out and replaced with GPT.
@@ -74,7 +75,9 @@ Now, we'll partition our device, install iOS 4, and patch it. Once this is done,
 * ***iPad 2,2 and 2,3 Baseband Acitvation***
 	* On some iPad 2,2 and 2,3s there seems to be an baseband issue that prevents the device from activating. Not sure what the root cause of it is yet, but it shoudn't take too long to figure it out. 
 
-## Changelog
+## Changelog 
+	* 1.3.3 - Cleans up iPad 2,2 processes. 
+	* 1.3.2 - Resolves Partial Zip Browser dependency issue.
 	* 1.3.1 - Resolves compiler issue.
 	* 1.3 - Major update. 
 		* Supports all versions of iOS 4.3 and Jailbreaking. 
